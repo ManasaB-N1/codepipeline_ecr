@@ -5,7 +5,7 @@ phases:
       - "echo Logging in to Amazon ECR..."
       - "aws --version"
       - REPOSITORY_URI=658186644834.dkr.ecr.us-east-1.amazonaws.com/ecr-demo
-      - REPO="$AWS_ACCOUNT_ID.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com"
+      - REPO="$658186644834.dkr.ecr.us-east-1.amazonaws.com"
       - "COMMIT_HASH=$(echo $CODEBUILD_RESOLVED_SOURCE_VERSION | cut -c 1-7)"
       - "IMAGE_TAG=build-$(echo $CODEBUILD_BUILD_ID | awk -F\":\" '{print $2}')"
       - "echo image_tag $IMAGE_TAG"
